@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <title>Canvas tutorial template</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="output-area">
+  <canvas id="canvas"></canvas>
+</div>
+<div id="input-area">
+  <div>
+    <label for="location-x">X座標</label>
+    <input type="number" id="location-x">
+  </div>
+  <div>
+    <label for="location-y">Y座標</label>
+    <input type="number" id="location-y">
+  </div>
+  <div>
+    <label for="speed-x">X方向速度</label>
+    <input type="range" id="speed-x" max="30" min="-30">
+  </div>
+  <div>
+    <label for="speed-y">Y方向速度</label>
+    <input type="range" id="speed-y" max="30" min="-30">
+  </div>
+  <div>
+    <label for="color">色</label>
+    <input type="color" id="color">
+  </div>
+  <div>
+    <label for="size">サイズ</label>
+    <input type="range" id="size" max="10">
+  </div>
+  <input type="submit" value="追加" id="add-button">
+</div>
+
+<script src="bound.js"></script>
+<script src="bound_sample.js"></script>
+</body>
+</html>
