@@ -13,14 +13,11 @@ Bound.Field.prototype = {
   components: [],
   constructor: Bound.Field,
   init: function (e) {
-    const self = this;
     this.canvas = e;
     if (this.canvas.getContext) {
       this.context = this.canvas.getContext('2d');
       this.context.globalCompositeOperation = "source-over";
-      setInterval(function () {
-        self.draw();
-      }, 33);
+      setInterval(() => this.draw(), 33);
     }
   },
   clear: function () {
@@ -39,11 +36,10 @@ Bound.Field.prototype = {
   },
   draw: function () {
     this.clear();
-    const self = this;
-    this.components.forEach(function (component) {
-      component.move(self.size);
-      component.draw(self.context);
-    })
+    this.components.forEach(component => {
+      component.move(this.size);
+      component.draw(this.context);
+    });
   }
 };
 
@@ -67,9 +63,9 @@ Bound.Component.defaults = {
 Bound.Component.prototype = {
   constructor: Bound.Component,
   init: function (props) {
-    this.props = Object.assign({}, JSON.parse(JSON.stringify(Bound.Component.defaults)),props || {});
+    this.props = Object.assign({}, JSON.parse(JSON.stringify(Bound.Component.defaults)), props || {});
   },
-  move:function (size) {
+  move: function (size) {
     let props = this.props;
     let location = props.location;
     let speed = props.speed;

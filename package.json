@@ -1,0 +1,25 @@
+{
+  "name": "bound_sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bound_sample.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akihiro0710/bound_sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akihiro0710/bound_sample/issues"
+  },
+  "homepage": "https://github.com/Akihiro0710/bound_sample#readme",
+  "devDependencies": {
+    "ts-loader": "^4.4.1",
+    "typescript": "^2.9.2",
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8"
+  }
+}
